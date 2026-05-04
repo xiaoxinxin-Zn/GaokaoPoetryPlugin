@@ -1,0 +1,2 @@
+# GaokaoPoetryPlugin
+一个为ClassIsland制作的轮播显示高考古诗文的小插件
