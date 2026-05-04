@@ -46,3 +46,25 @@ dotnet build -c Release
 ## 许可证
 
 本项目代码基于 MIT License 发布。古诗文数据遵循 CC BY-SA 4.0。
+
+## 鸣谢与版权声明
+
+### AI辅助生成说明
+本项目在开发过程中使用了AI编程助手辅助代码生成，具体如下：
+
+| AI工具 | 用途 | 生成代码许可 |
+| :--- | :--- | :--- |
+| **DeepSeek-V4** | 代码生成、逻辑优化 | MIT License |
+| **Claude Code** | 代码生成、项目结构调整 | Anthropic 服务条款 |
+
+### 声明
+- 本项目生成的代码均经过人工审查，开发者已理解并验证其逻辑。
+- 如果你使用了本项目代码，**必须在你的项目中保留本许可证及版权声明**。
+- DeepSeek-V4 生成的部分适用 MIT License，完整许可文本见项目根目录的 `LICENSE` 文件。
+
+### 致谢
+感谢 [DeepSeek](https://deepseek.com) 和 [Anthropic](https://anthropic.com) 提供的优秀AI模型与开发工具。
+
+---
+
+© [2026] [Xin_Zn]. 本项目基于 [MIT License] 发布。
