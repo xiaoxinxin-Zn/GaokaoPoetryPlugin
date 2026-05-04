@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseAvalonia>true</UseAvalonia>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <EnableDynamicLoading>True</EnableDynamicLoading>
+    <AssemblyName>GaokaoPoetryPlugin</AssemblyName>
+    <RootNamespace>GaokaoPoetryPlugin</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ClassIsland.PluginSdk" Version="2.0.0.1">
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaXaml Include="Components\**\*.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\divided.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="manifest.yml" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="icon.png" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="README.md" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
