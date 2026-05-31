@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseAvalonia>true</UseAvalonia>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <EnableDynamicLoading>True</EnableDynamicLoading>
+    <AssemblyName>GaokaoPoetryPlugin</AssemblyName>
+    <RootNamespace>GaokaoPoetryPlugin</RootNamespace>
+  </PropertyGroup>
+
+  <!-- 构建时数据校验（Python 可用时自动执行） -->
+  <Target Name="ValidateData" BeforeTargets="BeforeBuild">
+    <Exec Command="python validate_data.py --ci"
+          WorkingDirectory="$(ProjectDir)"
+          IgnoreExitCode="true"
+          ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ValidationExitCode" />
+    </Exec>
+    <Warning Condition="'$(ValidationExitCode)' != '0' And '$(ValidationExitCode)' != ''"
+             Text="数据校验未通过！请运行 python validate_data.py 查看详情。" />
+    <Message Condition="'$(ValidationExitCode)' == '0'"
+             Text="✓ 古诗文数据校验通过" Importance="high" />
+  </Target>
+
+  <ItemGroup>
+    <PackageReference Include="ClassIsland.PluginSdk" Version="2.0.0.1">
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaXaml Include="Components\**\*.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\divided.json" />
+    <EmbeddedResource Include="Assets\typo_prone_chars.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="manifest.yml" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="icon.png" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="README.md" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="CHANGELOG.md" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

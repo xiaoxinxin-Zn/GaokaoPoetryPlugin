@@ -1,0 +1,16 @@
+<ci:ComponentBase
+    x:TypeArguments="local:PoetryComponentSettings"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ci="http://classisland.tech/schemas/xaml/core"
+    xmlns:local="clr-namespace:GaokaoPoetryPlugin.Components"
+    x:Class="GaokaoPoetryPlugin.Components.PoetryComponent">
+    <Grid>
+        <TextBlock x:Name="PoetryTextBlock"
+                   TextWrapping="Wrap"
+                   TextAlignment="Center"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="14" />
+    </Grid>
+</ci:ComponentBase>

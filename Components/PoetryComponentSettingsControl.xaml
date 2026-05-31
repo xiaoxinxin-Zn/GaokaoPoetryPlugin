@@ -1,0 +1,40 @@
+<ci:ComponentBase
+    x:TypeArguments="local:PoetryComponentSettings"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ci="http://classisland.tech/schemas/xaml/core"
+    xmlns:local="clr-namespace:GaokaoPoetryPlugin.Components"
+    x:Class="GaokaoPoetryPlugin.Components.PoetryComponentSettingsControl">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="10">
+            <TextBlock Text="册别筛选" FontWeight="Bold" FontSize="14" Margin="0,0,0,8" />
+            <CheckBox Content="必修上册" IsChecked="{Binding Settings.BookRequiredUp}" Margin="0,3" />
+            <CheckBox Content="必修下册" IsChecked="{Binding Settings.BookRequiredDown}" Margin="0,3" />
+            <CheckBox Content="选择性必修上册" IsChecked="{Binding Settings.BookSelectiveUp}" Margin="0,3" />
+            <CheckBox Content="选择性必修中册" IsChecked="{Binding Settings.BookSelectiveMiddle}" Margin="0,3" />
+            <CheckBox Content="选择性必修下册" IsChecked="{Binding Settings.BookSelectiveDown}" Margin="0,3" />
+            <CheckBox Content="其他" IsChecked="{Binding Settings.BookOther}" Margin="0,3" />
+
+            <Separator Margin="0,12" />
+
+            <TextBlock Text="轮播间隔" Margin="0,0,0,5" />
+            <StackPanel Orientation="Horizontal" Spacing="8" Margin="0,0,0,10">
+                <NumericUpDown Minimum="5" Maximum="3600"
+                                Value="{Binding Settings.IntervalSeconds}"
+                                Width="120" />
+                <TextBlock Text="秒" VerticalAlignment="Center" />
+            </StackPanel>
+
+            <CheckBox Content="显示作者" IsChecked="{Binding Settings.ShowAuthor}" Margin="0,5" />
+            <CheckBox Content="显示标题" IsChecked="{Binding Settings.ShowTitle}" Margin="0,5" />
+
+            <TextBlock Text="字体大小" Margin="0,15,0,5" />
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <Slider Minimum="10" Maximum="48" Value="{Binding Settings.FontSize}"
+                        TickFrequency="1" IsSnapToTickEnabled="True" Width="200" />
+                <TextBlock Text="{Binding Settings.FontSize, StringFormat='{}{0} pt'}"
+                           VerticalAlignment="Center" Width="50" />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</ci:ComponentBase>
