@@ -1,0 +1,28 @@
+MIT License
+
+Copyright (c) 2026 Xin_Zn
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+...（中间省略）...
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+### Third-Party Notices
+
+#### Poetry Data
+The poetry data file (Assets/divided.json) is derived from
+https://github.com/clover-yan/gaokao-poetry and is licensed under
+CC BY-SA 4.0 (Creative Commons Attribution-ShareAlike 4.0 International).
+
+#### AI-Assisted Code
+Portions of this project's code were generated with the assistance of:
+
+| AI Tool        | Usage           | Code License  |
+| :------------- | :-------------- | :------------ |
+| **DeepSeek-V4** | Code generation | MIT License   |
+| **Claude Code** | Code generation | Included under MIT (see NOTICE) |
+
+All AI-generated code has been reviewed and modified by the project author.
