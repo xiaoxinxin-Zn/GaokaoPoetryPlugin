@@ -150,3 +150,5 @@ GaokaoPoetryPlugin/
 ├── RELEASE_NOTES.md
 └── icon.png
 ```
+
+<!-- CLASSISLAND_PKG_MD5 {"GaokaoPoetryPlugin.cipx": "06299241dddce41d724a3dd27be5f670"} -->
